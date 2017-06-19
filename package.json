@@ -1,0 +1,26 @@
+{
+  "name": "webpack-trainings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "css-loader": "^0.28.4",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunYNN/webpack-trainings.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunYNN/webpack-trainings/issues"
+  },
+  "homepage": "https://github.com/SunYNN/webpack-trainings#readme"
+}

@@ -63,62 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
-
-    var $ = __webpack_require__(3);
-
-    __webpack_require__(4);
-
-    var Header = function() {
-        this.init();
-    };
-
-    Header.prototype = {
-
-        init: function() {
-            this.bindEvent();
-        },
-
-        bindEvent: function() {
-            var context = this;
-
-            $('.header').on('click', function() {
-                context.render();
-            });
-        },
-
-        render: function() {
-            $('.header').html('这里是header');
-        }
-    };
-
-    module.exports = Header;
-}.call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, ".header {\r\n    color: #d70000;\r\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 /*
@@ -200,7 +149,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 3 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10460,38 +10409,7 @@ return jQuery;
 
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(1);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./header.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./header.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 5 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -10537,7 +10455,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(9);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -10850,7 +10768,170 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(7);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./app.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./app.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
+
+    var $ = __webpack_require__(1);
+
+    __webpack_require__(8);
+
+    var Header = function() {
+        this.init();
+    };
+
+    Header.prototype = {
+
+        init: function() {
+            this.bindEvent();
+        },
+
+        bindEvent: function() {
+            var context = this;
+
+            $('.header').on('click', function() {
+                context.render();
+            });
+        },
+
+        render: function() {
+            $('.header').html('这里是header');
+        }
+    };
+
+    module.exports = Header;
+}.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
+
+    var $ = __webpack_require__(1);
+
+    var Box = function() {
+        this.init();
+    };
+
+    Box.prototype = {
+
+        init: function() {
+            this.bindEvent();
+        },
+
+        bindEvent: function() {
+            var context = this;
+
+            $('.box').on('click', function() {
+                context.say();
+            });
+        },
+
+        say: function() {
+            console.log('box is here.');
+        }
+    };
+
+    module.exports = Box;
+}.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+
+/***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".header {\r\n    color: #d70000;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".box {\r\n    color: #3595e7;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(6);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!./header.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!./header.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 
@@ -10945,11 +11026,20 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Header = __webpack_require__(0);
+// 模块
+var Header = __webpack_require__(4);
 var header = new Header();
+
+// 样式
+
+__webpack_require__(3);
+
+// 自有逻辑
+var Box = __webpack_require__(5);
+var box = new Box();
 
 /***/ })
 /******/ ]);
